@@ -124,7 +124,7 @@ if [ ! -d "$srcdir" ]; then
 fi
 
 #read customizations
-source 'options.sh' "$VERSION" "$VMAJOR" "$VMINOR" "$VPATCH"
+source 'options.sh' "$instdir" "$VERSION" "$VMAJOR" "$VMINOR" "$VPATCH"
 cd "$srcdir"
 
 #only configure/make during the first install of a new version

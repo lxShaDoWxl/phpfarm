@@ -10,10 +10,12 @@
 # Don't touch this file here - it would prevent you from just
 # "svn update"'ing your phpfarm source code.
 
-version=$1
-vmajor=$2
-vminor=$3
-vpatch=$4
+instdir=$1
+version=$2
+vmajor=$3
+vminor=$4
+vpatch=$5
+
 
 configoptions="\
 --disable-short-tags \
