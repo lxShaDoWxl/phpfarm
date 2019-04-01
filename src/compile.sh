@@ -76,15 +76,6 @@ if [ "$VMAJOR.$VMINOR" = "0.0" ]; then
 fi
 
 sources=(
-    "http://museum.php.net/php$VMAJOR/php-$SHORT_VERSION.tar.bz2"
-    "http://www.php.net/get/php-$SHORT_VERSION.tar.bz2/from/this/mirror"
-    "https://downloads.php.net/~stas/php-$SHORT_VERSION.tar.bz2"
-    "https://downloads.php.net/~tyrael/php-$SHORT_VERSION.tar.bz2"
-    "https://downloads.php.net/~ab/php-$SHORT_VERSION.tar.bz2"
-    "https://downloads.php.net/~krakjoe/php-$SHORT_VERSION.tar.bz2"
-    "https://downloads.php.net/~davey/php-$SHORT_VERSION.tar.bz2"
-    "https://downloads.php.net/~pollita/php-$SHORT_VERSION.tar.bz2"
-    "https://downloads.php.net/~remi/php-$SHORT_VERSION.tar.bz2"
     "https://www.php.net/distributions/php-$SHORT_VERSION.tar.bz2"
 )
 
@@ -128,7 +119,7 @@ if [ ! -d "$srcdir" ]; then
         if [ ! -f "$srcfile" ]; then
             echo "ERROR: fetching sources failed:" >&2
             echo $url >&2
-            exit 2
+            exit 1
         fi
 
         if [ ! -f "$sigfile" ]; then
@@ -141,7 +132,7 @@ if [ ! -d "$srcdir" ]; then
                 echo "ERROR: invalid signature. This release may have been tampered with." >&2
                 echo "ERROR: See http://php.net/gpg-keys.php for more information on GPG signatures." >&2
                 rm -f "$srcfile" "$sigfile"
-                exit 2
+                exit 1
             fi
         fi
     fi
