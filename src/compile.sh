@@ -119,7 +119,7 @@ if [ ! -d "$srcdir" ]; then
         if [ ! -f "$srcfile" ]; then
             echo "ERROR: fetching sources failed:" >&2
             echo $url >&2
-            exit 1
+            exit 2
         fi
 
         if [ ! -f "$sigfile" ]; then
@@ -132,7 +132,7 @@ if [ ! -d "$srcdir" ]; then
                 echo "ERROR: invalid signature. This release may have been tampered with." >&2
                 echo "ERROR: See http://php.net/gpg-keys.php for more information on GPG signatures." >&2
                 rm -f "$srcfile" "$sigfile"
-                exit 1
+                exit 2
             fi
         fi
     fi
