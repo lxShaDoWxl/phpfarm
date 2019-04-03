@@ -77,6 +77,15 @@ fi
 
 sources=(
     "https://www.php.net/distributions/php-$SHORT_VERSION.tar.bz2"
+    "http://museum.php.net/php$VMAJOR/php-$SHORT_VERSION.tar.bz2"
+    "http://www.php.net/get/php-$SHORT_VERSION.tar.bz2/from/this/mirror"
+    "https://downloads.php.net/~stas/php-$SHORT_VERSION.tar.bz2"
+    "https://downloads.php.net/~tyrael/php-$SHORT_VERSION.tar.bz2"
+    "https://downloads.php.net/~ab/php-$SHORT_VERSION.tar.bz2"
+    "https://downloads.php.net/~krakjoe/php-$SHORT_VERSION.tar.bz2"
+    "https://downloads.php.net/~davey/php-$SHORT_VERSION.tar.bz2"
+    "https://downloads.php.net/~pollita/php-$SHORT_VERSION.tar.bz2"
+    "https://downloads.php.net/~remi/php-$SHORT_VERSION.tar.bz2"
 )
 
 #already extracted?
@@ -493,4 +502,3 @@ for suffix in "" "-$VMAJOR" "-$VMAJOR.$VMINOR" "-$SHORT_VERSION" "-$VERSION"; do
     fi
 done
 exit 0
-
